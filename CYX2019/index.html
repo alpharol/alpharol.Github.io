@@ -1,99 +1,63 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Audio samples from VAE-GAN-BASED NONPARALLEL EMOTIONAL SPEECH CONVERSION</title>
+    <title>毕业论文中期样音</title>
 
   </head>
   <body>
     <article>
       <header>
-        <h1>VAE-GAN-BASED NONPARALLEL EMOTIONAL SPEECH CONVERSION</h1>
+        <h1>非平行数据的多对多语音风格转换</h1>
       </header>
     </article>
 
-    <div><b>Authors:</b> Yuexin Cao, Zhengchen Liu, Minchuan Chen, Jun Ma, Shaojun Wang, Jing Xiao</div>
-    <div><b>Abstract:</b> This paper proposes a nonparallel emotional speech conversion (ESC) method based on Variational AutoenEoder-Generative Adversarial Network (VAE-GAN). Emotional speech conversion aims at transforming speech from one source emotion to that of a target emotion without changing the speaker's identity and linguistic content. However, the performances of existing nonparallel ESC methods still need improvement. In this work, an encoder is trained to elicit the content-related representations from acoustic features. Emotion-related representations are extracted in a supervised manner. Then the transformation between emotion-related representations from different domains is learned using an improved cycle-consistent Generative Adversarial Network (CycleGAN). Finally, emotion conversion is performed by eliciting and recombining the content-related representations of the source speech and the emotion-related representations of the target emotion. Subjective evaluation experiments are conducted and the results show that the proposed method outperforms the baseline in terms of voice quality and emotion conversion ability.</div>
+    <div><b>作者:</b> 曹越昕 @ 18210980047</div>
+    <div><b>摘要:</b> 本篇论文旨在通过解耦的方式完成对音频风格和内容的分解，进而完成音频的风格转换。模型结构可以分为三个部分，说话人编码器，内容编码器和解码器，目前最后的音频重建部分是使用了Griffin-Lim算法。后期会尝试一些神经声码器。</div>
 	
 	<br/>
 	<br/>
-	<div><b>Notes:</b> In the samples below, 'ang' means the emotion angry, 'hap' means happy, 'neu' means neural, 'sad' means sad.</div>
+	<div><b>音频的情绪转换</b> 
 	
 	<div>
-      <h3>Target Emotion: ang</h3>
+      <h3>目标情绪: 愤怒</h3>
       <table>
-        <tr><td class="transcript">neu</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2ang/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2ang/OM/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2ang/BS/01.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2ang/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2ang/OM/01.wav"></audio></td><td class="transcript">
 		
-        <tr><td class="transcript">sad</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2ang/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2ang/OM/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2ang/BS/02.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2ang/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2ang/OM/02.wav"></audio></td><td class="transcript">
 		
-        <tr><td class="transcript">sad</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2ang/GT/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2ang/OM/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2ang/BS/03.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">neu</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2ang/GT/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2ang/OM/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2ang/BS/04.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">neu</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2ang/GT/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2ang/OM/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2ang/BS/05.wav"></audio></td><td class="transcript">
       </table>
 
     </div>
 	
 	
 	<div>
-      <h3>Target Emotion: hap</h3>
+      <h3>目标情绪: 开心</h3>
       <table>
-        <tr><td class="transcript">sad</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2hap/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2hap/OM/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2hap/BS/01.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2hap/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2hap/OM/01.wav"></audio></td><td class="transcript">
+
 		
-        <tr><td class="transcript">sad</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2hap/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2hap/OM/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2hap/BS/02.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2hap/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2hap/OM/02.wav"></audio></td><td class="transcript">
+
 		
-        <tr><td class="transcript">sad</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2hap/GT/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2hap/OM/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2hap/BS/03.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">neu</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2hap/GT/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2hap/OM/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2hap/BS/04.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">neu</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2hap/GT/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2hap/OM/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2hap/BS/05.wav"></audio></td><td class="transcript">
       </table>
 
     </div>
 	
 	
 	<div>
-      <h3>Target Emotion: neu</h3>
+      <h3>目标情绪: 中性</h3>
       <table>
-        <tr><td class="transcript">ang</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2neu/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2neu/OM/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2neu/BS/01.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2neu/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2neu/OM/01.wav"></audio></td><td class="transcript">
+
 		
-        <tr><td class="transcript">ang</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2neu/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2neu/OM/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2neu/BS/02.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">ang</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2neu/GT/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2neu/OM/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2neu/BS/03.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">hap</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2neu/GT/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2neu/OM/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2neu/BS/04.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">hap</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2neu/GT/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2neu/OM/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2neu/BS/05.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2neu/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2neu/OM/02.wav"></audio></td><td class="transcript">
+
       </table>
 
     </div>
@@ -105,25 +69,14 @@
     <div>
       <h3>Target Emotion: sad</h3>
       <table>
-        <tr><td class="transcript">ang</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2sad/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2sad/OM/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2sad/BS/01.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2sad/GT/01.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2sad/OM/01.wav"></audio></td><td class="transcript">
+
 		
-        <tr><td class="transcript">ang</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2sad/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2sad/OM/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2sad/BS/02.wav"></audio></td><td class="transcript">
+
+        <tr><td><audio controls><source src="samples/2sad/GT/02.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2sad/OM/02.wav"></audio></td><td class="transcript">
+
 		
-        <tr><td class="transcript">hap</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2sad/GT/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2sad/OM/03.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2sad/BS/03.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">hap</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2sad/GT/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2sad/OM/04.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2sad/BS/04.wav"></audio></td><td class="transcript">
-		
-        <tr><td class="transcript">hap</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">our method</td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="transcript">baseline</td><td class="transcript">
-        <tr><td><audio controls><source src="samples/2sad/GT/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><audio controls><source src="samples/2sad/OM/05.wav"></audio></td><td class="transcript">&nbsp;&nbsp;&nbsp;&nbsp;
-		</td><td><audio controls><source src="samples/2sad/BS/05.wav"></audio></td><td class="transcript">
       </table>
 
     </div>
